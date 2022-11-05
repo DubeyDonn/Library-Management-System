@@ -9,16 +9,14 @@
         <center><h1 class="Title">LIBRARY MANAGEMENT SYSTEM</h1></center>
         <br /><br /><br />
 
-        <a href="2student.html"
-          ><button type="submit" class="click-btn">
-            STUDENT / TEACHER LOGIN
-          </button></a
+        <a href="login_form.php"
+          ><button type="submit" class="click-btn">LOGIN HERE</button></a
         >
         <br /><br /><br />
         <br />
 
-        <a href="3admin.html"
-          ><button type="submit" class="click-btn">ADMIN LOGIN</button></a
+        <a href="registration.php"
+          ><button type="submit" class="click-btn">REGISTER HERE</button></a
         >
       </div>
     </div>
