@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Login</title>
+    <meta charset="utf-8" />
+    <title>Student/Teacher Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="login2.js"></script>
   </head>
   <body>
-    <center>
-      <h1>
-        <b><u>ADMIN LOGIN</u></b>
-      </h1>
-      <br />
-      <br />
-      <br />
-      <br />
-      <div>
-        <form>
-          <div>
-            <label>Email ID: </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="ENTER YOUR EMAIL"
-              required=""
-            />
-          </div>
-          <br />
-          <div>
-            <label>Password: </label>
-            <input
-              type="Password"
-              name="Password"
-              placeholder="ENTER YOUR PASSWORD"
-              required=""
-            />
-          </div>
-          <br />
-          <input type="submit" name="submit" value="LOGIN" />
+    <div class="background">
+      <div class="Login_box">
+        <center><h1 class="Title">ADMIN LOGIN</h1></center>
+        <br /><br /><br />
 
-          <button>Forgot Password?</button>
-          <button>SIGN UP</button>
-        </form>
+        <center>
+          <div>
+            <form>
+              <br />
+              <label>Username: </label>
+              <input
+                type="text"
+                name=""
+                placeholder="ENTER YOUR USERNAME"
+                id="admin_username"
+              />
+
+              <br /><br />
+
+              <label>Password: </label>
+              <input
+                type="password"
+                name=""
+                placeholder="ENTER YOUR PASSWORD"
+                id="admin_password"
+              />
+
+              <br />
+              <br /><br />
+              <br /><br />
+
+              <input
+                class="click-login-btn"
+                type="submit"
+                name=""
+                value="LOGIN"
+                onclick="admin_validate()"
+              />
+              <br />
+              <br />
+
+              <!-- <div>
+                <small
+                  >Don't have an
+                  account?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small
+                >
+                <button>SIGN UP</button>
+              </div>
+              <br />
+
+              <div>
+                <small>Forgot your password?&nbsp; </small>
+                <button>Reset Password</button>
+              </div> -->
+            </form>
+          </div>
+        </center>
       </div>
-    </center>
+    </div>
   </body>
 </html>

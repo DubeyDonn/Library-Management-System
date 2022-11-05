@@ -50,3 +50,13 @@
   outline: none;
   border-radius: 30px;
 }
+.click-login-btn {
+  background: linear-gradient(to right, #1b1d12, #e7fff6);
+  width: 25%;
+  transition: 0.25px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+/* .click-login-btn input[type="submit"]:hover {
+  background: linear-gradient(to right, #19f83e, #ffffff);
+} */
