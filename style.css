@@ -1,14 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-.background{
-        height: 100%;
-        width: 100%;
-        background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-            url(background.jpeg);
-        background-position: center;
-        background-size: cover;
-        position: absolute;
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(background.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.Login_box {
+  width: 380px;
+  height: 400px;
+  position: relative;
+  margin: 10% auto;
+  background: #fff;
+  padding: 5px;
+}
+
+/* .toggle-btn {
+  width: 200;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff48001f;
+  border-radius: 10px;
+} */
+.Title {
+  font: x-large;
+  padding: 10px 10px;
+  font-family: "Courier New", Courier, monospace;
+  white-space: inherit;
+  width: 350px;
+  border: 1px solid #000000;
+}
+
+.click-btn {
+  padding: 10px, 50px;
+  cursor: pointer;
+  background: linear-gradient(to right, #e5ff74, #e7fff6);
+  width: 70%;
+  height: 15%;
+  display: block;
+  margin: auto;
+  border: o;
+  outline: none;
+  border-radius: 30px;
 }
