@@ -40,25 +40,26 @@ if (isset($_POST['submit'])) {
 ;
 ?>
 
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>login form</title>
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <div class="background">
-    <div class="Login_box">
-      <center>
-        <h1 class="Title">LOGIN HERE</h1>
-      </center>
+
+  <div class="form-container">
+
+    <form action="" method="post">
+      <h3>login now</h3>
       <?php
       if (isset($error)) {
         foreach ($error as $error) {
@@ -68,42 +69,14 @@ if (isset($_POST['submit'])) {
       }
       ;
       ?>
-      <br /><br /><br />
+      <input type="email" name="email" required placeholder="enter your email">
+      <input type="password" name="password" required placeholder="enter your password">
+      <input type="submit" name="submit" value="login now" class="form-btn">
+      <p>don't have an account? <a href="register_form.php">register now</a></p>
+    </form>
 
-      <center>
-        <div>
-          <form method="POST" , action="#">
-            <label>Username: </label>
-            <input type="text" name="username" placeholder="ENTER YOUR USERNAME" id="username" />
-
-            <br /><br />
-
-            <label>Password: </label>
-            <input type="password" name="password" placeholder="ENTER YOUR PASSWORD" id="password" />
-
-            <br />
-            <br /><br />
-
-            <input class="click-login-btn" type="submit" name="" value="LOGIN" />
-            <br />
-            <br />
-
-            <div>
-              <small>Don't have an
-                account?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
-              <a href="registration.php" <button>SIGN UP</button></a>
-            </div>
-            <br />
-
-            <div>
-              <small>Forgot your password?&nbsp; </small>
-              <button>Reset Password</button>
-            </div>
-          </form>
-        </div>
-      </center>
-    </div>
   </div>
+
 </body>
 
 </html>
