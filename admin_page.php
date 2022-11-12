@@ -80,7 +80,7 @@ if (!isset($_SESSION['admin_name'])) {
 				</span></u></h3>
       
 	  <a href="5add book.php"><input type="button"  value="add book" class="form-btn"></a>
-	  <a href="6book record.html"><input type="button"  value="BOOK REPORT" class="form-btn"></a>
+	  <a href="6book record.php"><input type="button"  value="BOOK REPORT" class="form-btn"></a>
 	  <a href="7book request.html"><input type="button"  value="BOOK REQUEST" class="form-btn"></a>
 	  <a href="addperson.php"><input type="button"  value="ADD PERSON" class="form-btn"></a>
 	  <a href="9student record.html"><input type="button"  value="STUDENT RECORD" class="form-btn"></a>
