@@ -14,13 +14,18 @@ if (!isset($_SESSION['user_name'])) {
 <html>
 
 <head>
-     <title>Student Homepage</title>
+     <title>User Homepage</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<!-- <body>
      <center>
           <h1><u>STUDENT/TEACHER<span>
-                         <?php echo $_SESSION['user_name'] ?>
+                         <?php //echo $_SESSION['user_name'] ?>
                     </span></u></h1>
      </center>
      <hr>
@@ -60,6 +65,26 @@ if (!isset($_SESSION['user_name'])) {
      <a href="st_homepage.html">
           <button>BACK</button>
      </a>
+</body> -->
+
+<body>
+     <div class="form-container">
+
+          <form>
+               <h3>user page</h3>
+               <h3><u><span>
+                              <?php echo $_SESSION['user_name'] ?>
+                         </span></u></h3>
+
+               <a href="13my_acc.html"><input type="button" value="MY ACCOUNT" class="form-btn"></a>
+               <a href="14request book.html"><input type="button" value="REQUEST BOOK" class="form-btn"></a>
+               <a href="15issue record.html"><input type="button" value="BOOK RECORD" class="form-btn"></a>
+               
+               <p><a href="login_form.php">back</a></p>
+          </form>
+
+     </div>
+
 </body>
 
 </html>

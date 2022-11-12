@@ -18,17 +18,19 @@ if (!isset($_SESSION['admin_name'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Admin Homepage</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<!-- <body>
 	<center>
-		<h1><u>ADMIN<span>
-					<?php echo $_SESSION['admin_name'] ?>
-				</span></u></h1>
+		<h1><u>ADMIN</u></h1>
+		<h3><u><span>
+					<?php //echo $_SESSION['admin_name'] ?>
+				</span></u></h3>
 	</center>
 	<hr>
 	<ol>
-		<a href="5add book.html">
+		<a href="5add book.php">
 			<li><button>ADD BOOK</button></li>
 
 			<br>
@@ -42,7 +44,7 @@ if (!isset($_SESSION['admin_name'])) {
 
 					<br>
 
-					<a href="addperson.html">
+					<a href="addperson.php">
 						<li><button>ADD PERSON</button></li>
 
 						<br>
@@ -66,6 +68,31 @@ if (!isset($_SESSION['admin_name'])) {
 	<br>
 	<a href="admin.html"><input type="submit" name="submit" value="BACK"></a>
 
+</body> -->
+
+<body>
+	<div class="form-container">
+
+    <form>
+      <h3>admin page</h3>
+	  <h3><u><span>
+					<?php echo $_SESSION['admin_name'] ?>
+				</span></u></h3>
+      
+	  <a href="5add book.php"><input type="button"  value="add book" class="form-btn"></a>
+	  <a href="6book record.html"><input type="button"  value="BOOK REPORT" class="form-btn"></a>
+	  <a href="7book request.html"><input type="button"  value="BOOK REQUEST" class="form-btn"></a>
+	  <a href="addperson.php"><input type="button"  value="ADD PERSON" class="form-btn"></a>
+	  <a href="9student record.html"><input type="button"  value="STUDENT RECORD" class="form-btn"></a>
+      
+      
+	  <a href="10issue book.html"><input type="button"  value="ISSUE BOOK" class="form-btn"></a>
+	  <a href="11issue book record.html"><input type="button"  value="ISSSUE BOOK REPORT" class="form-btn"></a>
+      <p><a href="login_form.php">back</a></p>
+    </form>
+
+  </div>
+	
 </body>
 
 </html>

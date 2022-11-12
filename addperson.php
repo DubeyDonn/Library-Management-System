@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     if ($pass != $cpass) {
       $error[] = 'password not matched!';
     } else {
-      $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$name','$email','$pass','$user_type')";
+      $insert = "INSERT INTO user_form(name, email, password) VALUES('$name','$email','$pass','$user_type')";
       mysqli_query($loginconn, $insert);
       header('location:login_form.php');
     }
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>register form</title>
 
-  <!-- custom css file link  -->
+
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
   <div class="form-container">
 
     <form action="" method="post">
-      <h3>register now</h3>
+      <h3>add person</h3>
       <?php
       if (isset($error)) {
         foreach ($error as $error) {
@@ -72,8 +72,10 @@ if (isset($_POST['submit'])) {
         <option value="user">user</option>
         <option value="admin">admin</option>
       </select>
-      <input type="submit" name="submit" value="register now" class="form-btn">
-      <p>already have an account? <a href="login_form.php">login now</a></p>
+      <input type="submit" name="submit" value="Add Person" class="form-btn">
+      <p><a href="admin_page.php">Back</a></p>
+      </p>
+
     </form>
 
   </div>

@@ -2,8 +2,6 @@
 
 @include 'config.php';
 
-session_start();
-
 if (isset($_POST['submit'])) {
 
   $name = mysqli_real_escape_string($loginconn, $_POST['name']);
@@ -18,26 +16,23 @@ if (isset($_POST['submit'])) {
 
   if (mysqli_num_rows($result) > 0) {
 
-    $row = mysqli_fetch_array($result);
-
-    if ($row['user_type'] == 'admin') {
-
-      $_SESSION['admin_name'] = $row['name'];
-      header('location:admin_page.php');
-
-    } elseif ($row['user_type'] == 'user') {
-
-      $_SESSION['user_name'] = $row['name'];
-      header('location:user_page.php');
-
-    }
+    $error[] = 'user already exist!';
 
   } else {
-    $error[] = 'incorrect email or password!';
+
+    if ($pass != $cpass) {
+      $error[] = 'password not matched!';
+    } else {
+      $insert = "INSERT INTO user_form(name, email, password) VALUES('$name','$email','$pass','$user_type')";
+      mysqli_query($loginconn, $insert);
+      header('location:login_form.php');
+    }
   }
 
 }
 ;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +42,7 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login form</title>
+  <title>register form</title>
 
 
   <link rel="stylesheet" href="style.css">
@@ -59,7 +54,7 @@ if (isset($_POST['submit'])) {
   <div class="form-container">
 
     <form action="" method="post">
-      <h3>login now</h3>
+      <h3>register now</h3>
       <?php
       if (isset($error)) {
         foreach ($error as $error) {
@@ -69,10 +64,16 @@ if (isset($_POST['submit'])) {
       }
       ;
       ?>
+      <input type="text" name="name" required placeholder="enter your name">
       <input type="email" name="email" required placeholder="enter your email">
       <input type="password" name="password" required placeholder="enter your password">
-      <input type="submit" name="submit" value="login now" class="form-btn">
-      <p>don't have an account? <a href="register_form.php">register now</a></p>
+      <input type="password" name="cpassword" required placeholder="confirm your password">
+      <select name="user_type">
+        <option value="user">user</option>
+
+      </select>
+      <input type="submit" name="submit" value="register now" class="form-btn">
+      <p>already have an account? <a href="login_form.php">login now</a></p>
     </form>
 
   </div>

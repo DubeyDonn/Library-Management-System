@@ -28,13 +28,6 @@
   padding: 5px;
 }
 
-/* .toggle-btn {
-  width: 200;
-  margin: 35px auto;
-  position: relative;
-  box-shadow: 0 0 20px 9px #ff48001f;
-  border-radius: 10px;
-} */
 .Title {
   font: x-large;
   padding: 10px 10px;
@@ -63,9 +56,6 @@
   cursor: pointer;
   border-radius: 30px;
 }
-/* .click-login-btn input[type="submit"]:hover {
-  background: linear-gradient(to right, #19f83e, #ffffff);
-} */
 
 .container {
   min-height: 100vh;
