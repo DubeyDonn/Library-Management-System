@@ -4,20 +4,19 @@
 
 if (isset($_POST['submit'])) {
 
-   $book_id = mysqli_real_escape_string($bookconn, $_POST['book_id']);
+   $ISBNNumber = mysqli_real_escape_string($bookconn, $_POST['ISBNNumber']);
    $book_name = mysqli_real_escape_string($bookconn, $_POST['book_name']);
    $authors = mysqli_real_escape_string($bookconn, $_POST['author']);
    $edition = mysqli_real_escape_string($bookconn, $_POST['edition']);
    $status = $_POST['status'];
-   $quantity = mysqli_real_escape_string($bookconn, $_POST['quantity']);
 
 
-   $insert = "INSERT INTO book_list(book_id, Name, Authors, Edition, Status, Quantity) VALUES('$book_id','$book_name','$authors','$edition','$status', $quantity)";
+   $insert = "INSERT INTO book_list(ISBNNumber, Name, Authors, Edition, Status) VALUES('$ISBNNumber','$book_name','$authors','$edition','$status')";
    mysqli_query($bookconn, $insert);
 
    //   $select = " SELECT * FROM book_list WHERE email = '$email' && password = '$pass' ";
 
-   //   $result = mysqli_query($loginconn, $select);
+   //   $result = mysqli_query($bookconn, $select);
 
    //   if (mysqli_num_rows($result) > 0) {
 
@@ -29,7 +28,7 @@ if (isset($_POST['submit'])) {
 //       $error[] = 'password not matched!';
 //     } else {
 //       $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$name','$email','$pass','$user_type')";
-//       mysqli_query($loginconn, $insert);
+//       mysqli_query($bookconn, $insert);
 //       header('location:login_form.php');
 //     }
 //   }
@@ -61,7 +60,7 @@ if (isset($_POST['submit'])) {
       <form action="" method="post">
          <h3>add book</h3>
 
-         <input type="number" name="book_id" required placeholder="book ID">
+         <input type="number" name="ISBNNumber" required placeholder="ISBNNumber">
          <input type="text" name="book_name" required placeholder="book name">
          <input type="text" name="author" required placeholder="authors">
          <input type="text" name="edition" required placeholder="edition">
@@ -69,7 +68,6 @@ if (isset($_POST['submit'])) {
             <option value="available">available</option>
             <option value="unavailable">unavailable</option>
          </select>
-         <input type="number" name="quantity" required placeholder="quantity">
 
          <!-- <label>Branch:
             <input type="radio" id="SE" name="software" value="SE">

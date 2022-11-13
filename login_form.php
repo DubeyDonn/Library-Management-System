@@ -6,15 +6,12 @@ session_start();
 
 if (isset($_POST['submit'])) {
 
-  $name = mysqli_real_escape_string($loginconn, $_POST['name']);
-  $email = mysqli_real_escape_string($loginconn, $_POST['email']);
+  
+  $email = mysqli_real_escape_string($bookconn, $_POST['email']);
   $pass = md5($_POST['password']);
-  $cpass = md5($_POST['cpassword']);
-  $user_type = $_POST['user_type'];
-
   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
 
-  $result = mysqli_query($loginconn, $select);
+  $result = mysqli_query($bookconn, $select);
 
   if (mysqli_num_rows($result) > 0) {
 

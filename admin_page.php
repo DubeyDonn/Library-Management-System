@@ -21,54 +21,7 @@ if (!isset($_SESSION['admin_name'])) {
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<!-- <body>
-	<center>
-		<h1><u>ADMIN</u></h1>
-		<h3><u><span>
-					<?php //echo $_SESSION['admin_name'] ?>
-				</span></u></h3>
-	</center>
-	<hr>
-	<ol>
-		<a href="5add book.php">
-			<li><button>ADD BOOK</button></li>
 
-			<br>
-			<a href="6book record.html">
-				<li><button>BOOK REPORT</button></li>
-
-				<br>
-				<a href="7book request.html">
-					<li><button>BOOK REQUEST</button></li>
-
-
-					<br>
-
-					<a href="addperson.php">
-						<li><button>ADD PERSON</button></li>
-
-						<br>
-						<a href="9student record.html">
-							<li><button>STUDENT RECORD</button></li>
-
-							<br>
-							<a href="10issue book.html">
-								<li><button>ISSUE BOOK</button></li>
-
-								<br>
-								<a href="11issue book record.html">
-									<li><button>ISSSUE BOOK REPORT</button></li>
-
-									<br>
-
-	</ol>
-	<div>
-		<button>LOGOUT</button>
-	</div>
-	<br>
-	<a href="admin.html"><input type="submit" name="submit" value="BACK"></a>
-
-</body> -->
 
 <body>
 	<div class="form-container">
@@ -80,14 +33,11 @@ if (!isset($_SESSION['admin_name'])) {
 				</span></u></h3>
       
 	  <a href="5add book.php"><input type="button"  value="add book" class="form-btn"></a>
-	  <a href="6book record.php"><input type="button"  value="BOOK REPORT" class="form-btn"></a>
-	  <a href="7book request.html"><input type="button"  value="BOOK REQUEST" class="form-btn"></a>
+	  <a href="6book record.php"><input type="button"  value="Available Books" class="form-btn"></a>
+	  <a href="Issue books.php"><input type="button"  value="Issue Books" class="form-btn"></a>
+	  <a href="Issued books.php"><input type="button" value="ISSUE RECORDS" class="form-btn"></a>
 	  <a href="addperson.php"><input type="button"  value="ADD PERSON" class="form-btn"></a>
 	  <a href="9student record.html"><input type="button"  value="STUDENT RECORD" class="form-btn"></a>
-      
-      
-	  <a href="10issue book.html"><input type="button"  value="ISSUE BOOK" class="form-btn"></a>
-	  <a href="11issue book record.html"><input type="button"  value="ISSSUE BOOK REPORT" class="form-btn"></a>
       <p><a href="login_form.php">back</a></p>
     </form>
 

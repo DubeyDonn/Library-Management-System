@@ -76,9 +76,9 @@ if (!isset($_SESSION['user_name'])) {
                               <?php echo $_SESSION['user_name'] ?>
                          </span></u></h3>
 
-               <a href="13my_acc.html"><input type="button" value="MY ACCOUNT" class="form-btn"></a>
-               <a href="14request book.html"><input type="button" value="REQUEST BOOK" class="form-btn"></a>
-               <a href="15issue record.html"><input type="button" value="BOOK RECORD" class="form-btn"></a>
+               <a href="6book record.php"><input type="button"  value="Available Books" class="form-btn"></a>
+               
+               <a href="Issued books.php"><input type="button" value="ISSUE RECORDS" class="form-btn"></a>
                
                <p><a href="login_form.php">back</a></p>
           </form>

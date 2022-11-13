@@ -14,8 +14,8 @@
       <br /><br /><br />
 
       <a href="login_form.php"><button type="submit" class="click-btn">LOGIN HERE</button></a>
-      <br /><br /><br />
-      <br />
+      <br /><br />
+      
 
       <a href="register_form.php"><button type="submit" class="click-btn">REGISTER HERE</button></a>
     </div>
